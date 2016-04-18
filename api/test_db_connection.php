@@ -23,8 +23,12 @@ and open the template in the editor.
         $password = '';
         $db_name = 'toeic';
         $dbtest = new db_connection($servername, $username, $password, $db_name);
-        
+        echo '<b>DB object result</b> = ';
         var_dump($dbtest);
+        
+        $dbcon = $dbtest->getConnection();
+        echo '<br><br><b>DB connection result</b> = ';
+        var_dump($dbcon);
         ?>
     </body>
 </html>
